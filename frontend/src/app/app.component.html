@@ -1,0 +1,36 @@
+<nav class="navbar">
+  <div class="container">
+    <div class="navbar-brand">
+      <a class="navbar-item">
+        JWT Angular Login
+      </a>
+    </div>
+
+    <div id="navbarMenuHeroA" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" [routerLink]="['']">
+          Home
+        </a>
+        <a class="navbar-item" [routerLink]="['/login']" *ngIf="!authService.isAuthenticated">
+          Login
+        </a>
+        <a class="navbar-item" [routerLink]="['/members']" *ngIf="authService.isAuthenticated">
+          Members
+        </a>
+        <a class="navbar-item" *ngIf="authService.isAuthenticated" (click)="authService.logout()">
+          Logout
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>
+
+<footer class="footer">
+  <div class="container has-text-centered">
+    <div class="content">
+      From Croatia with ❤️
+    </div>
+  </div>
+</footer>

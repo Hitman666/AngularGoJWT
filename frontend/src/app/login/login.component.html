@@ -1,0 +1,39 @@
+<section class="hero">
+  <div class="hero-body has-text-centered">
+    <form [formGroup]="form">
+      <div class="columns">
+        <div class="column"></div>
+
+        <div class="column is-3">
+          <div class="field">
+            <label class="label is-pulled-left">Email</label>
+            <div class="control">
+              <input class="input" type="text" placeholder="john@gmail.com" formControlName="email" name="email">
+            </div>
+          </div>
+        </div>
+
+        <div class="column"></div>
+      </div>
+
+      <div class="columns">
+        <div class="column"></div>
+
+        <div class="column is-3">
+          <div class="field">
+            <label class="label is-pulled-left">Password:</label>
+            <div class="control">
+              <input class="input" type="password" formControlName="password" name="password">
+            </div>
+
+            <br>
+            <br>
+            <a class="button is-primary is-medium is-fullwidth" (click)='login()'>Login</a>
+          </div>
+        </div>
+
+        <div class="column"></div>
+      </div>
+    </form>
+  </div>
+</section>
