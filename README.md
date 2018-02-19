@@ -205,6 +205,8 @@ We're going to build a simple full-stack app that will have a:
 
 Here's how the authentication with JWTs works:
 
+![](https://i.imgur.com/hthWzSx.png)
+
 + user submits the username and password to the server via the login page
 + server validates the sent data and creates a JWT token with a payload containing the user's id and an expiration timestamp
 + server signs the Header and Payload with a secret password and sends it back to the user's browser
